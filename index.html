@@ -12,7 +12,15 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]--><style>
+p.small {
+    line-height: 0.1;
+}
+
+p.big {
+    line-height: 1.8;
+}
+</style>
 	</head>
 	<body>
 
@@ -22,8 +30,8 @@
 					<nav>
 						<ul>
 							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">The Team</a></li>
-							<li><a href="#two">Methodology</a></li>
+							<li><a href="#one">Methodology</a></li>
+							<li><a href="#two">The Team</a></li>
 							<li><a href="#three">Get in touch</a></li>
 						</ul>
 					</nav>
@@ -37,9 +45,9 @@
 					<section id="intro" class="wrapper style1 fullscreen fade-up">
 						<div class="inner">
 							<h1>Welcome to Songscape</h1>
- 							<p>Songscape is an exploration into songs' expansion across the world and the cultural trends of music taste that arise between and within nations. Observe popular songs' evolution and associations in our geographical and semantic analysis.</p>
-  							<p>In our modern globalised world, music is more accessible than ever. The rise of the internet and streaming services have meant that in the majority of countries on the planet, anyone can listen to music from almost anywhere.</p>
-							<p>This project investigates the new Global Musical Landscape. Using data analysis and visualisation we are exploring the flows of music across the globe, the musical identities of individual countries, and how these identities relate to and potentially affect one another.</p>
+                            <p>Songscape is an exploration into songs' expansion across the world and the cultural trends of music taste that arise between and within nations. Observe popular songs' evolution and associations in our geographical and semantic analysis.</p><p class="small"></p><p>
+                            In our modern globalised world, music is more accessible than ever. The rise of the internet and streaming services have meant that in the majority of countries on the planet, anyone can listen to music from almost anywhere.</p><p class="small"></p><p>
+							This project investigates the new Global Musical Landscape. Using data analysis and visualisation we are exploring the flows of music across the globe, the musical identities of individual countries, and how these identities relate to and potentially affect one another.</p>
 							<ul class="actions">
 								<li><a href="visualisation.html" class="button">See our visualisation</a></li>
 							</ul>
@@ -48,55 +56,10 @@
 
 				<!-- One -->
                 <!-- Wrapper -->
-			<div id="wrapper">
-					<section id="one" class="wrapper">
+			<section id="one" class="wrapper">
 						<div class="inner">
-							<h1 class="major">Who we are</h1>
-
-							<!-- Text -->
-								<section>
-                                    <p>We are a group of 2nd year undergraduate students from UCL who have taken our natural interest in music to explore a data-driven analysis of song popularities across the world and of these developments' sources and repercussions.</p>
-                            </section>
-									<div class="who">
-								<section>
-									<span class="icon major fa-desktop"></span>
-                                <h3>Web Physician / Algy Falconer</h3>
-                                <p>
-                                    From the UK, Algy majors in Health and Environment. Graphic design and web development has been a hobby of his from a young age, and he appreciates the art of presenting information in the cleanest, most accessible ways. He enjoys a range of music, from various electronic genres through to Hip Hop and beyond, such as Cuban. He likes to think that he can vocalise a ditty and mix music at a tolerable level.</p>
-                            </section>
-                            <section>
-                                   <span class="icon major fa-book"></span>
-                                <h3>Semantic Shaman / Neel Ghosh</h3>
-                                <p>
-                                    Born in India and raised in the UK with some time along the way in Singapore, Neel majors in Societies. He has long been interested in cultural identity and migration and has worked a lot in these fields. He plays both piano and guitar and listens to a wide variety of music from all over the world.</p>
-                            </section>
-                            <section>
-									<span class="icon major fa-code-fork"></span>
-                                <h3>Local Geeza / Rob Macqueen</h3>
-                                <p>
-                                    From the UK, Rob majors in Cultures. His main interests are in philosophy and literature but also the role these disciplines come to play in society. While he plays classical guitar and a bit of double bass, he listens to mostly electronic music and hopes to explore music production.</p>
-                                    </section>
-                              <section>
-                                    <span class="icon major fa-chain"></span>
-                                  <h3>Team Maestro / Agnès Mahot</h3>
-                                  <p>
-                                    Agnès majors in Societies. Having lived in 7 different countries over the course of her life she has developed a strong interest in diversity and the role culture plays within globalisation and international relations. She also has a passion for Classical Music and Jazz.</p>
-                                    </section>
-								<section>
-									<span class="icon major fa-bar-chart"></span>
-                                   <h3>Programming Wizardry / Mufeng Tang</h3>
-                                   <p>
-                                     From China, Mufeng majors in Science and Engineering. His main interests lie in mathematics and programming but he also enjoys architecture and urban planning. Mufeng both plays and listens to fingerstyle guitar music though he does not expect this to emerge as a popular music style in our research! Mufeng has been responsible for the data visualisation in this project and has enjoyed the freedom offered by python to design his own ways of displaying data.</p>
-                                        </section>
-                            </div>
-                        </div>
-
-
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>Method of analysis</h2>
-							<p>We are analysing Spotify and Discogs data using a variety of approaches.</p>
+							<h1 class="major">Methods of analysis</h1>
+							<p>We are analysing Spotify and Last.fm data (the largest open APIs with location data) through a number of routes.</p>
 							<div class="features">
 								<section>
 									<span class="icon major fa-map"></span>
@@ -116,14 +79,65 @@
 								<section>
 									<span class="icon major fa-pie-chart"></span>
 									<h3>Visualisations</h3>
-									<p>Create an interactive map and pie charts to aid data comprehension.</p>
+                                    <p>Create an interactive map and pie charts to aid data comprehension.</p><ul class="actions">
+                                    <li><a href="visualisation.html" class="button">See our visualisation</a></li>
+							</ul>
 								</section>
 							</div>
-							<ul class="actions">
-								<li><a href="visualisation.html" class="button">See the visualisations</a></li>
-							</ul>
+							
 						</div>
 					</section>
+
+
+				<!-- Two -->
+					
+                <div id="wrapper">
+					<section id="two" class="wrapper style3-alt fade-up">
+						<div class="inner">
+							<h2>Who we are</h2>
+
+							<!-- Text -->
+								<section>
+                                    <p>We are a group of 2nd year undergraduate students from UCL who have taken our natural interest in music to explore a data-driven analysis of song popularities across the world and of these developments' sources and repercussions.</p>
+                            </section>
+									<div class="who">
+								<section>
+									<span class="icon major fa-desktop"></span>
+                                <h4>Web Physician / Algy Falconer</h4>
+                                <p>  From the UK, Algy majors in Health and Environment. Graphic design and web development has been a hobby of his from a young age, and he appreciates the art of presenting information in the cleanest, most accessible ways. He enjoys a range of music and likes to think that he can vocalise a ditty and mix music at a tolerable level.</p>
+                            </section>
+                            <section>
+                                   <span class="icon major fa-book"></span>
+                                <h4>Semantic Shaman / Neel Ghosh</h4>
+                                <p>
+                                    Born in India and raised in the UK with some time along the way in Singapore, Neel majors in Societies. He has long been interested in cultural identity and migration and has worked a lot in these fields. He plays both piano and guitar and listens to a wide variety of music from all over the world.</p>
+                            </section>
+                            <section>
+									<span class="icon major fa-code-fork"></span>
+                                <h4>Local Geeza / Rob Macqueen</h4>
+                                <p>
+                                    From the UK, Rob majors in Cultures. His main interests are in philosophy and literature but also the role these disciplines come to play in society. While he plays classical guitar and a bit of double bass, he listens to mostly electronic music and hopes to explore music production.</p>
+                                    </section>
+                              <section>
+                                    <span class="icon major fa-chain"></span>
+                                  <h4>Team Maestro / Agnès Mahot</h4>
+                                  <p>
+                                    Agnès majors in Societies. Having lived in 7 different countries over the course of her life she has developed a strong interest in diversity and the role culture plays within globalisation and international relations. She also has a passion for Classical Music and Jazz.</p>
+                                    </section>
+								<section>
+									<span class="icon major fa-bar-chart"></span>
+                                   <h4>Programming Wizardry / Mufeng Tang</h4>
+                                   <p>
+                                     From China, Mufeng majors in Science and Engineering. His main interests lie in mathematics and programming but he also enjoys architecture and urban planning. Mufeng both plays and listens to fingerstyle guitar music though he does not expect this to emerge as a popular music style in our research! Mufeng has been responsible for the data visualisation in this project and has enjoyed the freedom offered by python to design his own ways of displaying data.</p>
+                                        </section>
+                                        <section>
+									<span class="icon major fa-connectdevelop"></span>
+                                   <h4>Data Analysis</h4>
+                                   <p>
+                                    Together we are collecting data from Spotify and Last.fm APIs and analysing them with a variety of techniques. Mufeng is focussing at the global level; Rob and Algy at the local; and Agnès and Neel at the particular/semantic.</p>
+                                        </section>
+                            </div>
+                        </div>
 
 				<!-- Three -->
 					<section id="three" class="wrapper style1 fade-up">
