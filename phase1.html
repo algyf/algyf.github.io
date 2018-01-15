@@ -110,9 +110,7 @@
 										<p>On the world map above, you can choose a song from the drop-down list and drag the time bar to see the changes of the song’s popularity over time. Some useful tips:</p>
 											<p>1.	The most popular songs from each country/region are selected, since they would be the most representative ones of the local music culture. </p>
 											<p>2.	On the map, each bubble is located at the corresponding country, but to avoid confusion due to the overlapping bubbles, we also colour them differently and attached a legend showing the corresponding countries.</p>
-											<p>3.	A song’s “popularity” is denoted by its total number of streams played in a week divided by the total number of streams played in one country in the first 6 months of 2017. For example, the song Paris by The Chainsmokers was played 2,077,659 times in the third week of 2017 in UK, and the total number of streams in UK was 1,668,326,300, so  is its popularity in the third week of 2017 in UK. We normalised the data because streams played on Spotify may be influenced by its local number of users and local population.</p>										
-											
-											<p style="text-align:center;"><img src="images/polyfit.png" alt="csv" width="45%" height="45%"></p>
+											<p>3.	A song’s “popularity” is denoted by its total number of streams played in a week divided by the total number of streams played in one country in the first 6 months of 2017. For example, the song Paris by The Chainsmokers was played 2,077,659 times in the third week of 2017 in UK, and the total number of streams in UK was 1,668,326,300, so 2,077,659/1,668,326,300=0.0012 is its popularity in the third week of 2017 in UK. We normalised the data because streams played on Spotify may be influenced by its local number of users and local population.</p>									
 
 									</div>
 									
@@ -120,7 +118,12 @@
 									<div class="meth">
 										<p>Our first objective is to identify the major global trends in music streaming in order to observe the patterns of propagation of songs and determine the major “exporters” and “consumers” of music.</p>
 										<p>To do so we downloaded Spotify’s weekly top 200 charts for each country for the first 6 months (23 weeks) of 2017 – we decided to observe the variation over the course of 6 months as we found it was the maximum lifespan of a song in the top charts. We then merged them into one .csv file using a useful Python library: glob, which identifies files that have the same format in a directory:</p>
-										<p tyle="text-align:center;"><img src="images/edit.png" alt="csv" width="45%" height="45%"></p>
+										<p tyle="text-align:center;"><img src="images/edit.png" alt="csv" width="90%" height="90%"></p>
+										<p>We then cleaned the data and used it to plot the spatial and temporal evolution of the most popular songs from each country and visualize it on an interactive world map. This is the most difficult part of our visualization – an interactive interface requires much more techniques than creating static visualizations like bar and pie charts. We found a Python library that satisfies our requirements: Bokeh. It can create widgets like drop-down lists and slide bars that control the visualization, and generate a html file that could be embedded in a website. We combined it with the Numpy function polyfit() and poly1d() that generate the polynomials that best fit the temporal evolution of the popularity from our data, and create an interactive bubble map showing the spatial difference and temporal evolution of the songs. Visitors of our website could play with it on the top of this page.</p>
+										<p style="text-align:center;"><img src="images/bokeh.png" alt="down" width="90%" height="90%"></p>
+										<p style="font-size:12px;">The Bokeh programme section</p>
+										<p style="text-align:center;"><img src="images/polyfit.png" alt="down" width="90%" height="90%"></p>
+										<p style="font-size:12px;">The Polyfit and Poly1d functions</p>
 									</div>
 
 									<h3><i>Results</i></h3>
