@@ -119,12 +119,12 @@
 										<p>Our first objective is to identify the major global trends in music streaming in order to observe the patterns of propagation of songs and determine the major “exporters” and “consumers” of music.</p>
 										<p>To do so we downloaded Spotify’s weekly top 200 charts for each country for the first 6 months (23 weeks) of 2017 – we decided to observe the variation over the course of 6 months as we found it was the maximum lifespan of a song in the top charts. We then merged them into one .csv file using a useful Python library: glob, which identifies files that have the same format in a directory:</p>
 										<p style="text-align:center;"><img src="images/edit.png" alt="csv" width="90%" height="90%"></p>
-										<figcaption>Dataset sample and the glob library that helped import files</figcaption>
+										<p style="text-align:center; font-size=12px;">Dataset sample and the glob library that helped import files</p>
 										<p>We then cleaned the data and used it to plot the spatial and temporal evolution of the most popular songs from each country and visualize it on an interactive world map. This is the most difficult part of our visualization – an interactive interface requires much more techniques than creating static visualizations like bar and pie charts. We found a Python library that satisfies our requirements: Bokeh. It can create widgets like drop-down lists and slide bars that control the visualization, and generate a html file that could be embedded in a website. We combined it with the Numpy function polyfit() and poly1d() that generate the polynomials that best fit the temporal evolution of the popularity from our data, and create an interactive bubble map showing the spatial difference and temporal evolution of the songs. Visitors of our website could play with it on the top of this page.</p>
 										<p style="text-align:center;"><img src="images/bokeh.png" alt="down" width="90%" height="90%"></p>
-										<figcaption>The Bokeh programme section</figcaption>
+										<p style="text-align:center; font-size=12px;">The Bokeh programme section</p>
 										<p style="text-align:center;"><img src="images/polyfit.png" alt="down" width="50%" height="50%"></p>
-										<figcaption>The Polyfit and Poly1d functions</figcaption>
+										<p style="text-align:center; font-size=12px;">The Polyfit and Poly1d functions</p>
 									</div>
 
 									<h3><i>Results</i></h3>
