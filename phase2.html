@@ -323,7 +323,8 @@ function showSlides(n) {
 										<p style="text-align:center;"><img src="images/bar.png" alt="csv" width="100%" height="100%"></p>
 										<p>From the countries showing high streams-to-population ratios we chose a diverse sample of 18 countries based on geographical area (e.g. Denmark and Hong-Kong) and size of the country (e.g. France and Portugal).</p>
 										<p>Using Pandas and Numpy in Python, we then merged a dataset of the songs’ origin with the Spotify dataset and cleaned it so that each song’s name was associated to its country of production. This process involved a looping function that assign the country of origin to a song if it has already existed in the dataset so as to avoid repetitive work (shown below). This allowed us to retrieve a “song diversity index”, based on the part of local songs over the part of foreign songs that made the top 200 in the past year. We then used matplotlib to create pie charts above to visualize the origin of the songs listened to in each of the 18 countries.</p>
-										<p style="text-align:center;"><img src="images/loop.png" alt="csv" width="100%" height="100%"></p>
+										<p style="text-align:center;"><img src="images/loop.png" alt="csv" width="50%" height="50%"></p>
+										<p>Finally, using the Python seaborn library, which is a powerful library in making the visualizations containing statistical elements, we created linear regressions comparing different indexes such as the globalisation and migration indexes to our song diversity index, in order to establish whether a correlation exists between certain social aspects of the country and its musical scene.</p>
 									</div>
 
 									<h3>Alternate</h3>
