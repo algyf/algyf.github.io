@@ -105,19 +105,22 @@
 							<!-- Table -->
 								<section>
                                 <br>
-									<h3><i>Introduction</i></h3>
-									<div class="intro">
-										<p>The first stage of our analysis is on global level, where the most popular songs from different countries and regions are selected as the object of our analysis, and an interactive bubble map is created to visualise the data. At this stage, we aim to have a general grasp of our research by looking at the size, expansion, shrinkage over time (in weeks), in order to see countries’ responses to songs from all over the world.</p>
-
-										<p>On the world map above, you can choose a song from the drop-down list and drag the time bar to see the changes of the song’s popularity over time. To help you understand the visualisation, we would like to introduce several important concepts and variables first:</p>
+									<h3><i>User Manual</i></h3>
+									<div class="manual">
+										<p>On the world map above, you can choose a song from the drop-down list and drag the time bar to see the changes of the song’s popularity over time. Some useful tips:</p>
 											<p>1.	The most popular songs from each country/region are selected, since they would be the most representative ones of the local music culture. </p>
 											<p>2.	On the map, each bubble is located at the corresponding country, but to avoid confusion due to the overlapping bubbles, we also colour them differently and attached a legend showing the corresponding countries.</p>
 											<p>3.	A song’s “popularity” is denoted by its total number of streams played in a week divided by the total number of streams played in one country in the first 6 months of 2017. For example, the song Paris by The Chainsmokers was played 2,077,659 times in the third week of 2017 in UK, and the total number of streams in UK was 1,668,326,300, so  is its popularity in the third week of 2017 in UK. We normalised the data because streams played on Spotify may be influenced by its local number of users and local population.</p>										
-											<p>4.	We take the first 6 months (23 weeks) as our analysis time range – as we discovered, most of the popular songs maintained their popularity for no longer than 6 months. Since Spotify Chart provides weekly data (downloaded as csv files, shown below) we could set the time frame unit to week.</p>
-											<p style="text-align:center;"><img src="images/csv.png" alt="csv" width="45%" height="45%"></p>
-											<p>5.	We used the polyfit() and poly1d() in Python numpy library to find out the best fit polynomial of the changes of popularity of the songs, and the size of the bubbles are determined by the polynomials generated.</p>
+											
 											<p style="text-align:center;"><img src="images/polyfit.png" alt="csv" width="45%" height="45%"></p>
 
+									</div>
+									
+									<h3><i>Methodologies</i></h3>
+									<div class="meth">
+										<p>Our first objective is to identify the major global trends in music streaming in order to observe the patterns of propagation of songs and determine the major “exporters” and “consumers” of music.</p>
+										<p>To do so we downloaded Spotify’s weekly top 200 charts for each country for the first 6 months (23 weeks) of 2017 – we decided to observe the variation over the course of 6 months as we found it was the maximum lifespan of a song in the top charts. We then merged them into one .csv file using a useful Python library: glob, which identifies files that have the same format in a directory:</p>
+										<p tyle="text-align:center;"><img src="images/edit.png" alt="csv" width="45%" height="45%"></p>
 									</div>
 
 									<h3><i>Results</i></h3>
